@@ -1,0 +1,22 @@
+
+
+.home__inner {
+  padding: 14px;
+}
+
+.action__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.habits__section {
+  margin-top: 24px;
+}
+
+.habits__section {
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}

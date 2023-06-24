@@ -1,0 +1,68 @@
+/* .addHabitButton {
+  text-align: center;
+} */
+
+.addButton {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #27ae60;
+}
+
+.habitForm {
+  display: flex;
+}
+
+.habitForm input[type='text'] {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  outline: none;
+  background: #f2f2f2;
+}
+
+.habitForm input[type='text']::placeholder {
+  font-size: 1rem;
+}
+
+.habitForm button[type='submit'] {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-left: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel__btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-left: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel__btn:hover {
+  background-color: #c0392b;
+}
+
+.habitForm button[type='submit']:hover {
+  background-color: #2980b9;
+}

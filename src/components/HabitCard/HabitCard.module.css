@@ -1,0 +1,79 @@
+.habitCard {
+  background-color: #ffefd5;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative; /* Added positioning for delete button */
+}
+
+.hovered {
+  border: 2px solid #ff6161; /* Add a border when hovered */
+}
+
+.habitName {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.dateCreated {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.statusButtons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.statusButton {
+  background-color: #fff;
+  /* color: #fff; */
+  border: 1px solid #666;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.statusButton.done {
+  background-color: #2ecc71;
+}
+
+.statusButton.notDone {
+  background-color: #e74c3c;
+}
+
+.statusButton.noActionTaken {
+  background-color: #aaa;
+  font-size: 20px;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff6161;
+  transition: color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.deleteButton:hover {
+  color: #ff2e2e;
+}

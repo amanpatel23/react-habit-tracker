@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home/Home";
+import WeeklyView from "./pages/WeeklyView/WeeklyView";
+import HabitProvider from "./contexts/habitContext";
 
 function App() {
+  const router = createBrowserRouter([
+    { path: "/", element: <Home /> },
+    { path: "/weekly-view", element: <WeeklyView /> },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HabitProvider>
+        <RouterProvider router={router} />
+      </HabitProvider>
+    </>
   );
 }
 
