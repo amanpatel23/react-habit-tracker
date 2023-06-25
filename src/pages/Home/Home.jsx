@@ -3,7 +3,6 @@ import { habitContext } from "../../contexts/habitContext";
 import AddHabitButton from "../../components/AddHabitButton/AddHabitButton";
 import HabitCard from "../../components/HabitCard/HabitCard";
 import WeeklyViewButton from "../../components/WeeklyViewButton/WeeklyViewButton";
-import WeeklyView from "../WeeklyView/WeeklyView";
 import styles from "./Home.module.css";
 
 function Home() {
@@ -14,6 +13,7 @@ function Home() {
       <div className={styles.home__outer}>
         <div className={styles.home__inner}>
           <div className={styles.action__buttons}>
+            {/* displaying buttons */}
             <WeeklyViewButton />
             <AddHabitButton />
           </div>
@@ -21,6 +21,7 @@ function Home() {
             <h2>Create Some Habits Man!</h2>
           ) : (
             <div className={styles.habits__section}>
+              {/* displaying habit cards in grid view */}
               {habits.map((habit) => (
                 <HabitCard
                   key={habit.id}

@@ -37,6 +37,7 @@ function HabitProvider({ children }) {
     return dates.reverse();
   };
 
+  // function to add the habit 
   const addHabit = (name, date) => {
     const id = Date.now() + "-" + parseInt(Math.random() * 1e9);
 
@@ -50,6 +51,7 @@ function HabitProvider({ children }) {
     setHabitsUpdated(true);
   };
 
+  // function to handle updation of the habit
   const updateHabit = (id, clickedDate, clickedStatus) => {
     setHabits((prevHabits) =>
       prevHabits.map((habit) => {
@@ -78,11 +80,13 @@ function HabitProvider({ children }) {
     setHabitsUpdated(true);
   };
 
+  // function to handle deletion of the habit
   const deleteHabit = (id) => {
     setHabits((prevHabits) => prevHabits.filter((habit) => habit.id !== id));
     setHabitsUpdated(true);
   };
 
+  // set the habits array in the browser local storage whenever changes occur locally
   useEffect(() => {
     if (habitsUpdated) {
       localStorage.setItem("ap-habits", JSON.stringify(habits));
@@ -90,6 +94,7 @@ function HabitProvider({ children }) {
     }
   }, [habits]);
 
+  // retrieve the habits from the local storage when the component mounts
   useEffect(() => {
     const savedHabits = localStorage.getItem("ap-habits");
     if (savedHabits) {

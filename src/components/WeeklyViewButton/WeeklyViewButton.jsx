@@ -5,8 +5,8 @@ const WeeklyViewButton = () => {
 
   const navigate = useNavigate();
 
+  // when button clicked go to the weekly-view page
   const handleClick = () => {
-     // Replace '/weekly-view' with the actual route for the weekly view page
      navigate('/weekly-view')
   };
 

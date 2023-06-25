@@ -7,10 +7,12 @@ function HabitCard({ id, name, date }) {
 
   const [isHovered, setIsHovered] = useState(false);
 
+  // handling status buttond click
   const statusButtonClickHandler = (clickedDate, clickedStatus) => {
     updateHabit(id, clickedDate, clickedStatus);
   };
 
+  // handling habit deletion
   const deleteButtonClickHandler = () => {
     deleteHabit(id);
   };
@@ -38,9 +40,12 @@ function HabitCard({ id, name, date }) {
           <i className="fa-solid fa-trash-can"></i>
         </button>
       )}
+      {/* showing habit name */}
       <h3 className={styles.habitName}>{name}</h3>
+      {/* showing creation date */}
       <p className={styles.dateCreated}>{date.date}</p>
       <div className={styles.statusButtons}>
+        {/* status buttons representing done, not done, no action taken */}
         <button
           onClick={() => statusButtonClickHandler(date, 1)}
           className={`${styles.statusButton} ${
