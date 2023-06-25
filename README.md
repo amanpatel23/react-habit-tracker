@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Hosted Link:
+https://habit-tracker-ap.netlify.app/
+
+### react-habit-tracker
+Users can create any number of habits and keep track of the previous seven days habits. They can keep track of either the task was done or not done or no action had taken for any habit for any of the previous seven days.
+
+### Features and Technologies:
+* users can create multiple habits.
+* users can see the past seven days status of the habits in the weekly-view page.
+* all the habits and its status gets saved in the browser's local sotrage so even if we refresh the page or close the tab the habits don't go anywhere.
+* users can delete the habit(it gets deleted permanently i.e. from the local storage too).
+* users can update the status of any habit for any previous days.
+
 ## Available Scripts
 
 In the project directory, you can run:
